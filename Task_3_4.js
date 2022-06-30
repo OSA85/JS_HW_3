@@ -71,8 +71,11 @@ const enterprises = [
     )
 
     let addInEnterpris = enterprises.find(enterpris => enterpris.id === idEnterpris);
+    if (addInEnterpris){
     addInEnterpris.departments.push ({id: maxId + 1, name: newDepartment, employees_count: 10})
-    console.log(addInEnterpris)
+    console.log(addInEnterpris)}
+    else {console.log(`Нет предприятия с id == ${idEnterpris}`)}
+    
   }
 
-  addDepartment(5, "Управление по управлению управлениями")
+  addDepartment(3, "Управление по управлению управлениями")
